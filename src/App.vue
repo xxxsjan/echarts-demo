@@ -66,12 +66,21 @@ export default {
           },
         },
         tooltip: {
-          // formatter: function (params) {
-          //     return 'X: ' + params.data[0].toFixed(2) + '<br>Y: ' + params.data[1].toFixed(2);
-          // },
           trigger: "axis",
           axisPointer: {
             type: "cross",
+          },
+          formatter: function (param) {
+            console.log('param: ', param);
+            //   return param.slice(1).reduce((pre, cur) => {
+            //     let value = (cur.data.originData || cur.value) + "";
+            //     pre += `<div style="text-align:left">
+            //   ${cur.marker}
+            //   <span> ${cur.seriesName}</span>
+            //   <span style="font-weight:600">${value}</span>
+            // </div>`;
+            //     return pre;
+            //   }, "");
           },
         },
         grid: {},
